@@ -9,11 +9,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-public abstract class AbstractTipDialog extends Dialog{
+public abstract class AbstractTipDialog extends AbstractBaseDialog{
 
-	protected Context mContext;
-	protected IDialogInterface mDialogInterface;
-	
 	protected TextView mTVTitle;
 	protected TextView mTVMessage;
 	
@@ -35,12 +32,6 @@ public abstract class AbstractTipDialog extends Dialog{
 		getWindow().setAttributes(lp);
 	
 	
-	}
-	
-	protected abstract void setupViews();
-	
-	public void setCommonDialogListener(IDialogInterface listener){
-		mDialogInterface = listener;
 	}
 	
 	public void setTitle(String title){
