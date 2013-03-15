@@ -2,8 +2,11 @@ package com.geniusgithub.commondialog.dialog;
 
 
 import com.geniusgithub.commondialog.R;
+import com.geniusgithub.commondialog.util.Utils;
+
 import android.content.Context;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -27,6 +30,15 @@ public class AbstractNormalDialog extends AbstractTipDialog implements android.v
 		mBtCancel = (Button) findViewById(R.id.bt_cancel);
 		mBtSure.setOnClickListener(this);
 		mBtCancel.setOnClickListener(this);
+		
+//		WindowManager.LayoutParams lp = getWindow().getAttributes();	
+//		int width = (int) (0.9 * Utils.getScreenWidth(mContext));
+//		if (width < 300)
+//		{
+//			width = 300;
+//		}
+//		lp.width = width;
+//		getWindow().setAttributes(lp);
 	}
 
 	@Override

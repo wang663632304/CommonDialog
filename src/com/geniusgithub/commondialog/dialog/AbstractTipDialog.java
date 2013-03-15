@@ -1,9 +1,12 @@
 package com.geniusgithub.commondialog.dialog;
 
+import com.geniusgithub.commondialog.util.Utils;
+
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 public abstract class AbstractTipDialog extends Dialog{
@@ -23,8 +26,15 @@ public abstract class AbstractTipDialog extends Dialog{
 		ColorDrawable dw = new ColorDrawable(0x00);
 		Window window = getWindow();
 		window.setBackgroundDrawable(dw);
-
+		
 		setupViews();
+		
+		WindowManager.LayoutParams lp = getWindow().getAttributes();	
+		int width = (int) (0.9 * Utils.getScreenWidth(mContext));
+		lp.width = width;
+		getWindow().setAttributes(lp);
+	
+	
 	}
 	
 	protected abstract void setupViews();

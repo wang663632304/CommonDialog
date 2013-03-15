@@ -25,16 +25,7 @@ public class AbstractSimpleDialog extends AbstractTipDialog implements android.v
 		mTVTitle = (TextView)findViewById(R.id.tv_title);
 		mTVMessage = (TextView) findViewById(R.id.tv_message);
 		mBtSure = (Button) findViewById(R.id.bt_sure);
-		mBtSure.setOnClickListener(this);
-		
-		WindowManager.LayoutParams lp = getWindow().getAttributes();	
-		int width = (int) (0.8 * Utils.getScreenWidth(mContext));
-		if (width < 300)
-		{
-			width = 300;
-		}
-		lp.width = width;	
-		
+		mBtSure.setOnClickListener(this);			
 	}
 
 	@Override
