@@ -24,17 +24,9 @@ public abstract class AbstractListViewDialog extends AbstractBaseDialog implemen
 	public AbstractListViewDialog(Context context) {
 		super(context);
 		
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		ColorDrawable dw = new ColorDrawable(0x00);
-		Window window = getWindow();
-		window.setBackgroundDrawable(dw);
-		
+		alpaWindow();
 		setupViews();
-		
-		WindowManager.LayoutParams lp = getWindow().getAttributes();	
-		int width = (int) (0.9 * Utils.getScreenWidth(mContext));
-		lp.width = width;
-		getWindow().setAttributes(lp);
+		fitWidth();
 	}
 
 	public void setAdapter(BaseAdapter adapter){

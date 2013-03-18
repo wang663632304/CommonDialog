@@ -19,17 +19,9 @@ public abstract class AbstractTipDialog extends AbstractBaseDialog{
 		super(context);
 		mContext = context;
 		
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		ColorDrawable dw = new ColorDrawable(0x00);
-		Window window = getWindow();
-		window.setBackgroundDrawable(dw);
-		
+		alpaWindow();
 		setupViews();
-		
-		WindowManager.LayoutParams lp = getWindow().getAttributes();	
-		int width = (int) (0.9 * Utils.getScreenWidth(mContext));
-		lp.width = width;
-		getWindow().setAttributes(lp);
+		fitWidth();
 	
 	
 	}

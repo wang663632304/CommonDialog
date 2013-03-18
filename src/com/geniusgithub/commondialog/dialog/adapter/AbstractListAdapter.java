@@ -20,7 +20,6 @@ public abstract class AbstractListAdapter<T> extends BaseAdapter{
 		 mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	 }
 	 
-     public  abstract void refreshData(List<T> objects);
      
      public void clear(){
     	 mObjects.clear();
